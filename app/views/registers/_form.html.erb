@@ -1,0 +1,51 @@
+<%= form_for @register, :html => { :multipart => true } do |f| %>
+   <%  if @register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@register.errors.count, "error") %> prohibited this register from being saved:</h2>
+
+      <ul>
+      <% register.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex %>
+    <%= f.radio_button(:sex, 'Male', :checked => "unchecked") %> Male
+    <%= f.radio_button(:sex, 'Female', :checked => "unchecked") %> Female
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %> 
+    <%= f.text_area :address %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+ <div class="actions">
+    <%= f.submit %>
+ </div> 
+ 
+ <% end %>
+
+ 
