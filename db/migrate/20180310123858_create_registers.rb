@@ -3,7 +3,7 @@ class CreateRegisters < ActiveRecord::Migration[5.0]
     create_table :registers do |t|
       t.string :first_name
       t.string :last_name
-      t.text :sex 
+      t.string :sex 
       t.string :email
       t.text :address
       

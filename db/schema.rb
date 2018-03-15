@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20180312095859) do
   create_table "registers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.text     "sex",                limit: 65535
+    t.string   "sex"
     t.string   "email"
     t.text     "address",            limit: 65535
     t.datetime "created_at",                       null: false

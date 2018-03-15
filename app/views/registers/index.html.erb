@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Registers</h1>
+<%= paginate @registers %>
 
 <table>
   <thead>
@@ -23,7 +24,7 @@
         <td><%= register.sex %></td>
         <td><%= register.email %></td>
         <td><%= register.address %></td>
-        <td><%= register.image.url(:thumb) %></td>
+        <td><%= image_tag register.image.url(:thumb) %></td>
         <td><%= link_to 'Show', register %></td>
         <td><%= link_to 'Edit', edit_register_path(register) %></td>
         <td><%= link_to 'Destroy', register, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,7 +32,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= paginate @registers %>
 <br>
 <%= link_to 'New Register', new_register_path %>
 <br/>

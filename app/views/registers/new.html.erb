@@ -1,5 +1,14 @@
 <h1>New Register</h1>
+<%= form_for @register, :html => { :multipart => true } do |f| %>
 
-<%= render 'form', register: @register %>
+<%= render(:partial => 'form', :locals => { :f => f}) %>
+<div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
 
+ <div class="actions">
+    <%= f.submit("Create Register") %>
+ </div>
+  <% end %>
 <%= link_to 'Back', registers_path %>

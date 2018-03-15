@@ -54,5 +54,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
 gem "paperclip", "~> 5.2.1"
-gem 'kaminari', '~> 0.16.3'
-gem 'will_paginate-bootstrap', '~> 1.0.1'
+gem "kaminari", github: "amatsuda/kaminari"
